@@ -1,0 +1,27 @@
+entorno:
+  catalogo: workspace
+  esquema_fuente: default
+  esquema_producto: fraude_prod
+
+datos:
+  tabla_entrenamiento: workspace.default.muestra_base_fraude
+  tabla_entrada_scoring: workspace.fraude_prod.reclamaciones_entrada
+  tabla_scores: workspace.fraude_prod.scores_reclamaciones
+  tabla_ejecuciones: workspace.fraude_prod.scoring_runs
+
+modelo:
+  nombre: workspace.fraude_prod.fraude_random_forest
+  alias_productivo: Champion
+  alias_candidato: Candidate
+  semilla: 42
+
+scoring:
+  umbral_alto: 0.4296664901149328
+  umbral_medio: 0.3804625163054875
+  modo: batch
+
+monitoreo:
+  psi_advertencia: 0.10
+  psi_critico: 0.25
+  ks_estadistico_minimo: 0.10
+  ks_pvalue_maximo: 0.05

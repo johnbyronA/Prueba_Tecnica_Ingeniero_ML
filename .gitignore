@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Datos y artefactos sensibles o pesados
+data/raw/*
+!data/raw/.gitkeep
+*.joblib
+*.pkl
+
+# Archivos locales de Databricks
+.databricks/
+databricks.yml.lock
+
+# Construcción y temporales
+tmp/
+.codex-finalizer-*/
+*.inspect.ndjson
+*_montage.png
+
+# Material anterior conservado solo de forma local
+archivo_local_no_publicar/
+
+# Sistema operativo y editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
